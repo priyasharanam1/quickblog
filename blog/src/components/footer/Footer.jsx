@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.info}>
         <div className={styles.logo}>
           <Image src="/quills.jpg" alt="lama blog" width={60} height={60} style={{borderRadius:"50%"}}/>
-          <h1 className={styles.logoText}>QuickBlog</h1>
+          <h1 className={styles.logoText}>BlogIt</h1>
         </div>
         <p className={styles.desc}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
