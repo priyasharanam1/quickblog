@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import verifyToken from '../middlewares/auth.middleware.js';
 import { createPost, deletePost, getAllPosts, getPosts, updatePost } from '../controllers/post.controller.js';
-import { createPostSchema } from '../validators/post.valodator.js';
+import { createPostSchema } from '../validators/post.validator.js';
 import validate from '../middlewares/validator.middleware.js';
 
 const router = Router();

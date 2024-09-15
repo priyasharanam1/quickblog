@@ -1,11 +1,13 @@
 {
-  "name": "voir-backend",
+  "name": "blog-backend",
   "version": "1.0.0",
-  "description": "backend for a video streaming platform",
+  "description": "backend for a blogging platform",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "start": "node src/index.js",
+    "build": "npm install && cd ../Frontend && npm install && npm run build"
   },
   "keywords": [
     "javascript",
@@ -28,6 +30,7 @@
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.3",
     "mongoose-aggregate-paginate-v2": "^1.1.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "zod": "^3.23.8"
   }
 }
