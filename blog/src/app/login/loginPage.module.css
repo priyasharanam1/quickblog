@@ -4,10 +4,12 @@
     justify-content: center;
     align-items: center;
     height: 500px;
+    background-color: var(--bg); /* Theme-based background */
+    transition: background-color 0.3s ease;
   }
   
   .wrapper {
-    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    background-color: var(--softBg); /* Theme-based background */
     padding: 2rem;
     border-radius: 15px;
     width: 300px;
@@ -15,12 +17,14 @@
     flex-direction: column;
     gap: 1.6rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* Blurred effect behind */
+    backdrop-filter: blur(10px);
+    color: var(--textColor); /* Theme-based text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .heading {
     font-size: 1.8rem;
-    color: white;
+    color: var(--textColor); /* Theme-based text color */
     text-align: center;
   }
   
@@ -30,7 +34,7 @@
   }
   
   .label {
-    color: white;
+    color: var(--textColor); /* Theme-based text color */
     font-size: 1.1rem;
   }
   
@@ -38,9 +42,16 @@
     padding: 0.7rem;
     margin-top: 0.2rem;
     margin-bottom: 1.2rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--softTextColor); /* Theme-based soft border color */
+    background-color: var(--softBg); /* Theme-based background for inputs */
+    color: var(--textColor); /* Theme-based text color */
     border-radius: 8px;
     font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .input::placeholder {
+    color: var(--softTextColor); /* Theme-based placeholder text color */
   }
   
   .btn {
@@ -52,12 +63,12 @@
     cursor: pointer;
     font-size: 1.1rem;
     margin-top: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .btn:hover {
     background-color: rgba(0, 155, 155, 0.934);
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    transform: scale(1.05);
   }
   
   .error {
@@ -67,7 +78,6 @@
     font-size: 1.1rem;
   }
   
-  /* Responsive Design */
   @media (max-width: 400px) {
     .wrapper {
       width: 90%;
